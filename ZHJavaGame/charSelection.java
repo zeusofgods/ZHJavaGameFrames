@@ -69,6 +69,7 @@ public class charSelection extends JPanel{
 		classStats.setSize(300, 100);
 		classStats.setBackground(Color.green.darker().darker().darker());
 		classStats.setEditable(false);
+	
 		this.add(classStats);
 		
 		this.add(Archer);
@@ -98,17 +99,20 @@ public class charSelection extends JPanel{
 	//[3] = balance 
 					charSelection.classIntro.setText("You are an Archer");
 				
-					CharVariables.archClass[0] = 30;
-					CharVariables.archClass[1] = 23;
-					CharVariables.archClass[2] = 12;
-					CharVariables.archClass[3] = 15;
+					CharVariables.charClass = "Archer";
+					CharVariables.userStats[0] = CharVariables.archClass[0];
+					CharVariables.userStats[1] = CharVariables.archClass[1];
+					CharVariables.userStats[2] = CharVariables.archClass[2];
+					CharVariables.userStats[3] = CharVariables.archClass[3];
+					
 					charSelection.classStats.setText(
 							"Stats:" + "\n"+
-							"Archer:	" + CharVariables.Name + "\n" + 
-							"Health:	" + CharVariables.archClass[0] +  "\n" +
-							"Speed: 	" + CharVariables.archClass[1] + "\n" +
-							"Attack: 	" + CharVariables.archClass[2] + "\n" + 
-							"Balance:	" + CharVariables.archClass[3]+ "\n");
+							CharVariables.charClass + "	" + CharVariables.Name + "\n" + 
+							"Health: 	" + CharVariables.userStats[0] +  "\n" +
+							"Speed: 	" + CharVariables.userStats[1] + "\n" +
+							"Attack: 	" + CharVariables.userStats[2] + "\n" + 
+							"Balance:	" + CharVariables.userStats[3]+ "\n");
+								
 					charSelection.Archer.setForeground(Color.red.darker());
 					charSelection.Warrior.setForeground(Color.black);
 					charSelection.Mage.setForeground(Color.black);
@@ -120,20 +124,22 @@ public class charSelection extends JPanel{
 					
 				}else if (e.getSource().toString().contains("Warrior")){
 					charSelection.classIntro.setText("You are a Warrior");	
-			
-						CharVariables.warClass[0] = 45;
-						CharVariables.warClass[1] = 12;
-						CharVariables.warClass[2] = 20;
-						CharVariables.warClass[3] = 8;
+					
+					CharVariables.charClass = "Warrior";
+					CharVariables.userStats[0] = CharVariables.warClass[0];
+					CharVariables.userStats[1] = CharVariables.warClass[1];
+					CharVariables.userStats[2] = CharVariables.warClass[2]; 
+					CharVariables.userStats[3] = CharVariables.warClass[3]; 
+					
 					
 						charSelection.classStats.setText(
 								"Stats:" + "\n"+
-								"Warrior:	" + CharVariables.Name + "\n" + 
-								"Health: 	" + CharVariables.warClass[0] +  "\n" +
-								"Speed: 	" + CharVariables.warClass[1] + "\n" +
-								"Attack: 	" + CharVariables.warClass[2] + "\n" + 
-								"Balance:	" + CharVariables.warClass[3]+ "\n");
-						
+								CharVariables.charClass + "	" + CharVariables.Name + "\n" + 
+								"Health: 	" + CharVariables.userStats[0] +  "\n" +
+								"Speed: 	" + CharVariables.userStats[1] + "\n" +
+								"Attack: 	" + CharVariables.userStats[2] + "\n" + 
+								"Balance:	" + CharVariables.userStats[3]+ "\n");
+									
 						charSelection.Archer.setForeground(Color.black);
 						charSelection.Warrior.setForeground(Color.red.darker());
 						charSelection.Mage.setForeground(Color.black);
@@ -144,23 +150,24 @@ public class charSelection extends JPanel{
 				}else if (e.getSource().toString().contains("Mage")){
 					
 					charSelection.classIntro.setText("You are a Mage");	
-					
-					CharVariables.mageClass[0] = 25;
-					CharVariables.mageClass[1] = 18;
-					CharVariables.mageClass[2] = 17;
-					CharVariables.mageClass[3] = 3;
 				
+					CharVariables.charClass = "Mage";
+					CharVariables.userStats[0] = CharVariables.mageClass[0];
+					CharVariables.userStats[1] = CharVariables.mageClass[1];
+					CharVariables.userStats[2] = CharVariables.mageClass[2];
+					CharVariables.userStats[3] = CharVariables.mageClass[3];
+					
 					charSelection.classStats.setText(
 							"Stats:" + "\n"+
-							"Mage:	" + CharVariables.Name + "\n" + 
-							"Health: 	" + CharVariables.mageClass[0] +  "\n" +
-							"Speed: 	" + CharVariables.mageClass[1] + "\n" +
-							"Attack: 	" + CharVariables.mageClass[2] + "\n" + 
-							"Balance:	" + CharVariables.mageClass[3]+ "\n");
+							CharVariables.charClass + "	" + CharVariables.Name + "\n" + 
+							"Health: 	" + CharVariables.userStats[0] +  "\n" +
+							"Speed: 	" + CharVariables.userStats[1] + "\n" +
+							"Attack: 	" + CharVariables.userStats[2] + "\n" + 
+							"Balance:	" + CharVariables.userStats[3]+ "\n");
+					
 					charSelection.Archer.setForeground(Color.black);
 					charSelection.Warrior.setForeground(Color.black);
 					charSelection.Mage.setForeground(Color.red.darker());
-					
 					charSelection.cont.setEnabled(true);
 					
 				}

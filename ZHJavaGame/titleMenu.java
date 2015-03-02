@@ -23,7 +23,6 @@ public class titleMenu extends JPanel {
 	
 	public titleMenu(){
 	
-		this.setSize(getMinimumSize());
 		this.setBackground(Color.red.darker());
 		this.setSize(900, 900/16*9);
 		this.setLayout(null);

@@ -34,6 +34,10 @@ public class ColosseumClash {
 		frame.setLocationRelativeTo(null);
 		frame.getContentPane().add(panel);
 		frame.setVisible(true);
+		
+		CharVariables.Variables();
+		
+	
 
 	}
 
